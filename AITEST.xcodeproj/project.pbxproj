@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		652D0A9A21781DFF009D97AA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 652D0A9921781DFF009D97AA /* main.cpp */; };
+		652D0AA321782020009D97AA /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 652D0AA121782020009D97AA /* libSDL2-2.0.0.dylib */; };
+		652D0AA421782020009D97AA /* libSDL2_gfx-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 652D0AA221782020009D97AA /* libSDL2_gfx-1.0.0.dylib */; };
+		652D0AB321782079009D97AA /* AI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 652D0AAB21782078009D97AA /* AI.cpp */; };
+		652D0AB421782079009D97AA /* Puck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 652D0AAC21782078009D97AA /* Puck.cpp */; };
+		652D0AB521782079009D97AA /* Edges.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 652D0AAD21782078009D97AA /* Edges.cpp */; };
+		652D0AB621782079009D97AA /* Striker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 652D0AAE21782078009D97AA /* Striker.cpp */; };
+		652D0AB721782079009D97AA /* Screen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 652D0AB221782079009D97AA /* Screen.cpp */; };
+		652D0AB921790B67009D97AA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 652D0AB821790B67009D97AA /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +31,19 @@
 
 /* Begin PBXFileReference section */
 		652D0A9621781DFF009D97AA /* AITEST */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AITEST; sourceTree = BUILT_PRODUCTS_DIR; };
-		652D0A9921781DFF009D97AA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		652D0AA121782020009D97AA /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../../../../usr/local/Cellar/sdl2/2.0.8/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
+		652D0AA221782020009D97AA /* libSDL2_gfx-1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2_gfx-1.0.0.dylib"; path = "../../../../../../usr/local/Cellar/sdl2_gfx/1.0.4/lib/libSDL2_gfx-1.0.0.dylib"; sourceTree = "<group>"; };
+		652D0AA921782078009D97AA /* AI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AI.h; sourceTree = "<group>"; };
+		652D0AAA21782078009D97AA /* Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Screen.h; sourceTree = "<group>"; };
+		652D0AAB21782078009D97AA /* AI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AI.cpp; sourceTree = "<group>"; };
+		652D0AAC21782078009D97AA /* Puck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Puck.cpp; sourceTree = "<group>"; };
+		652D0AAD21782078009D97AA /* Edges.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Edges.cpp; sourceTree = "<group>"; };
+		652D0AAE21782078009D97AA /* Striker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Striker.cpp; sourceTree = "<group>"; };
+		652D0AAF21782078009D97AA /* Puck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Puck.h; sourceTree = "<group>"; };
+		652D0AB021782079009D97AA /* Striker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Striker.h; sourceTree = "<group>"; };
+		652D0AB121782079009D97AA /* Edges.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Edges.h; sourceTree = "<group>"; };
+		652D0AB221782079009D97AA /* Screen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Screen.cpp; sourceTree = "<group>"; };
+		652D0AB821790B67009D97AA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				652D0AA321782020009D97AA /* libSDL2-2.0.0.dylib in Frameworks */,
+				652D0AA421782020009D97AA /* libSDL2_gfx-1.0.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +64,7 @@
 			children = (
 				652D0A9821781DFF009D97AA /* AITEST */,
 				652D0A9721781DFF009D97AA /* Products */,
+				652D0AA021782020009D97AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +79,28 @@
 		652D0A9821781DFF009D97AA /* AITEST */ = {
 			isa = PBXGroup;
 			children = (
-				652D0A9921781DFF009D97AA /* main.cpp */,
+				652D0AB821790B67009D97AA /* main.cpp */,
+				652D0AAB21782078009D97AA /* AI.cpp */,
+				652D0AA921782078009D97AA /* AI.h */,
+				652D0AAD21782078009D97AA /* Edges.cpp */,
+				652D0AB121782079009D97AA /* Edges.h */,
+				652D0AAC21782078009D97AA /* Puck.cpp */,
+				652D0AAF21782078009D97AA /* Puck.h */,
+				652D0AB221782079009D97AA /* Screen.cpp */,
+				652D0AAA21782078009D97AA /* Screen.h */,
+				652D0AAE21782078009D97AA /* Striker.cpp */,
+				652D0AB021782079009D97AA /* Striker.h */,
 			);
 			path = AITEST;
+			sourceTree = "<group>";
+		};
+		652D0AA021782020009D97AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				652D0AA221782020009D97AA /* libSDL2_gfx-1.0.0.dylib */,
+				652D0AA121782020009D97AA /* libSDL2-2.0.0.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +159,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				652D0A9A21781DFF009D97AA /* main.cpp in Sources */,
+				652D0AB421782079009D97AA /* Puck.cpp in Sources */,
+				652D0AB621782079009D97AA /* Striker.cpp in Sources */,
+				652D0AB921790B67009D97AA /* main.cpp in Sources */,
+				652D0AB521782079009D97AA /* Edges.cpp in Sources */,
+				652D0AB321782079009D97AA /* AI.cpp in Sources */,
+				652D0AB721782079009D97AA /* Screen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +286,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.8/lib,
+					/usr/local/Cellar/sdl2_gfx/1.0.4/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +300,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.8/lib,
+					/usr/local/Cellar/sdl2_gfx/1.0.4/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
