@@ -53,28 +53,16 @@ int main() {
     SDL_Event event;        //create SDL event
     puck.changeDirec(0,0);      //set direction
     
-    
-    
-    
+    //initialize helper variables
     float data[10000][8];
-    
     float gamma;
     float beta;
     int bounces;
     int yfinal;
     int posOrNeg;
-    
-    int net_L = 100;
-    int net_R = 200;
-    int straight_thresh = 50;
-    int distance_from_corner = 20;
-    float theta;
-    float phi;
-
-    
-    
     bool success;
-    int quit = 0; int time; int count = 0;   //declare loop variables
+    int quit = 0; int count = 0;
+    
     while (count<length_data){
         
         if (SDL_PollEvent(&event)){
@@ -126,89 +114,11 @@ int main() {
         data[count][5] = ai.y;
         data[count][6] = ai.vy;
         
-        
-        
-        
-        /*
-        data[count][0] = puck.vx;
-        data[count][1] = puck.vy;
-        data[count][2] = puck.x;
-        data[count][3] = puck.y;
-
-        data[count][4] = ai.y;
-        data[count][5] = ai.vy;
-        */
-        /*
-        if(sqrt(pow(ai.y-net_L,2)+pow(ai.x,2)) < sqrt(pow(net_R-ai.y,2)+pow(ai.x,2))){
-            //shoot towards right
-            if((net_R-ai.y) > straight_thresh){
-                //shoot straight and to the right of the striker
-                theta = atan((puck.y-net_R)/(puck.x));
-                puck.vy = 10*sin(theta);
-                puck.vx = -10*cos(theta);
-            }else{
-                //bounce off right wall
-                theta = atan((puck.y-net_R)/(puck.x));
-                phi = atan((2*SCREEN_HEIGHT-(net_R-puck.y))/puck.x)-theta;
-                puck.vy = 10*sin(phi);
-                puck.vx = 10*cos(phi);
-            }
-        }else{
-            //shoot towards left
-            if((ai.y-net_L) > straight_thresh){
-                //shoot straight and to the left of the striker
-                theta = atan((net_L-puck.y)/(puck.x));
-                puck.vy = 10*sin(theta);
-                puck.vx = -10*cos(theta);
-            }else{
-                //bounce off left wall
-                theta = atan((net_L-puck.y)/(puck.x));
-                phi = atan((2*SCREEN_HEIGHT-(puck.y-net_L))/puck.x)-theta;
-                puck.vy = 10*sin(phi);
-                puck.vx = -10*cos(phi);
-            }
-        }
-         */
-        /*
-        while(puck.vx > 0){
-            
-            time = SDL_GetTicks();
-            
-            
-            puck.checkWallCollision(edges);
-            success = puck.checkStrikerCollision(striker);
-            
-            if(puck.vx > 0.1){
-                break;
-            }
-            puck.move();
-            
-            
-             edges.Draw(renderer);
-             filledCircleColor(renderer, puck.x, puck.y, puck_rad, 0xFF0000FF);
-             filledCircleColor(renderer, ai.x, ai.y, ai.r, 0xFFFFFFFF);
-             SDL_RenderDrawLine(renderer, 0, 100, 5, 100);
-             SDL_RenderDrawLine(renderer, 0, 200, 5, 200);
-             screen.refresh();       //update screen
-            
-        }
-    
-            /*time = SDL_GetTicks()-time;
-             if (time<20){
-             SDL_Delay(time);
-             }
-             }
-        
-        
-        
-        */
-        
         //check for collisions then move
         data[count][7] = 0;
         
         while(ai.x > puck.x){
 
-            time = SDL_GetTicks();
             puck.checkWallCollision();
             success = puck.checkAICollision(ai);
             
@@ -233,42 +143,6 @@ int main() {
             screen.refresh();       //update screen
              
         }
-        
-        
-    
-        
-//        if (data[count][6] == 0){
-//            cout<<10000000<<endl;
-//            cout<<data[count][0] <<endl; //puck.vx
-//            cout<<data[count][1]<<endl;     //puck.vy
-//            cout<<data[count][2] <<endl;    //puck.x
-//            cout<<data[count][3] <<endl;    //puck.y
-//            cout<<data[count][4] <<endl;    //ai.y
-//            cout<<data[count][5] << endl;   //ai.vy
-//
-//
-//            puck.vx = data[count][0]; //puck.vx
-//            puck.vy = data[count][1];     //puck.vy
-//            puck.x = data[count][2];    //puck.x
-//            puck.y = data[count][3];    //puck.y
-//            ai.y = data[count][4];    //ai.y
-//            ai.vy = data[count][5];   //ai.vy
-//        }
-        /*
-        
-            while(ai.x > puck.x){
-                
-                
-                puck.checkWallCollision(edges);
-                success = puck.checkAICollision(ai);
-                puck.move();
-                ai.MoveAI(edges);
-                edges.Draw(renderer);
-                filledCircleColor(renderer, puck.x, puck.y, puck_rad, 0xFF0000FF);
-                filledCircleColor(renderer, ai.x, ai.y, ai.r, 0xFFFFFFFF);
-                screen.refresh();
-            }
-*/
         
 
         myfile << data[count][0]<<","<<data[count][1]<<","<<data[count][2]<<","<<data[count][3]<<","<<data[count][4]<<","<<data[count][5]<<","<<data[count][6]<<","<<data[count][7]<<endl;
